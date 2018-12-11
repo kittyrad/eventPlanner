@@ -14,17 +14,17 @@ class Navigation extends React.Component {
         return (
             <header class="main-header">
                 <div>
-                    <a href="events" class="main-header__brand">My Events</a>
+                    <a href="/" class="main-header__brand">Home</a>
                 </div><nav class="main-nav">
                     <ul class="main-nav__items">
                         <li class="main-nav__item">
-                            <a href="past/index.html">Past Events</a>
+                            <a href="events">All Events</a>
                         </li>
                         <li class="main-nav__item">
-                            <a href="wish/index.html">Wish Events</a>
+                            <a href="events">Future Events</a>
                         </li>
                         <li class="main-nav__item main-nav__item--cta">
-                            <a href="interest/index.html">Plan Event</a>
+                            <a href="events">Plan Event</a>
                         </li>
                     </ul>
                 </nav>
