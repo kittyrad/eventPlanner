@@ -1,7 +1,7 @@
 import React from 'react';
-import "./EventNavigation.css";
+import "./Navigation.css";
 
-class EventNavigation extends React.Component {
+class Navigation extends React.Component {
 
     constructor(props) {
         super(props);
@@ -14,7 +14,7 @@ class EventNavigation extends React.Component {
         return (
             <header class="main-header">
                 <div>
-                    <a href="index.html">My Events</a>
+                    <a href="events" class="main-header__brand">My Events</a>
                 </div><nav class="main-nav">
                     <ul class="main-nav__items">
                         <li class="main-nav__item">
@@ -23,8 +23,8 @@ class EventNavigation extends React.Component {
                         <li class="main-nav__item">
                             <a href="wish/index.html">Wish Events</a>
                         </li>
-                        <li class="main-nav__item">
-                            <a href="interest/index.html">Future Events</a>
+                        <li class="main-nav__item main-nav__item--cta">
+                            <a href="interest/index.html">Plan Event</a>
                         </li>
                     </ul>
                 </nav>
@@ -33,4 +33,4 @@ class EventNavigation extends React.Component {
     }
 }
 
-export default EventNavigation;
+export default Navigation;

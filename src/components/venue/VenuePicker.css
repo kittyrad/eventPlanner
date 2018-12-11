@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+
+#event-overview {
+    background: url("fireworks.jpg");
+    width: 100%;
+    height: 600px;
+    padding: 10px;
+}
+
+.section-title {
+    color: #2ddf5c;
+}
+
+#event-overview h1 {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.main-section__locations {
+    width:100%;
+    text-align: center;
+}
+
+.main-section__location {
+    display: inline-block;
+    padding: 100px 100px;
+}
+
+.main-section__location button {
+    border: none;
+    padding: 0px;
+    color: white;
+    font-size: 20px;
+    background-color: #ff1b68;
+    padding:8px 16px;
+    border-radius: 8px;
+    border: 0px;
+}
+
+.main-section__location img {
+    width: 300px;
+    height: 250px;
+}
+
+h1 {
+    width:100%;
+    text-align: center;
+}

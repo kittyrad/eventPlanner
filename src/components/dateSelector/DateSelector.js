@@ -2,9 +2,9 @@ import React from 'react';
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
-import "./EventPicker.css";
+import "./DateSelector.css";
 
-class EventPicker extends React.Component {
+class DateSelector extends React.Component {
 
     constructor(props) {
         super(props);
@@ -49,19 +49,23 @@ class EventPicker extends React.Component {
 
     render() {
         return (
-            <div className="Event">
-                <DatePicker
+            <div class="main-picker__items">
+                <p class="main-picker__title">Start Date: </p>
+                <DatePicker className="main-picker__item"
                     selected={this.state.startDate}
                     onChange={this.handleStartDateChange}
                 />
-                <DatePicker
+                <p class="main-picker__title">End Date: </p>
+                <DatePicker className="main-picker__item"
                     selected={this.state.endDate}
                     onChange={this.handleEndDateChange}
                 />
-                <input type="number" value={this.state.numberOfGuests} onChange={this.handleNumberOfGuests} />
+                <p class="main-picker__title">Number of Guests: </p>
+                <input class="main-picker__item" type="number" value={this.state.numberOfGuests} onChange={this.handleNumberOfGuests} />
+                <button class="main-picker__search">Search</button>
             </div>
         );
     }
 }
 
-export default EventPicker;
+export default DateSelector;

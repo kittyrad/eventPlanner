@@ -1,0 +1,33 @@
+.main-picker__items {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    padding: 30px 60px;
+    background-color: #16702b;
+}
+
+.main-picker__item {
+    margin: 20px;
+    padding:10px;
+}
+
+.main-picker__title {
+    display: inline-block;
+}
+
+.main-picker__search {
+    color: white;
+    font-size: 20px;
+    background-color: #ff1b68;
+    padding:8px 16px;
+    border-radius: 8px;
+    border: 0px;
+}
+
+.main-picker__search:hover,
+.main-picker__search:active {
+    color: #ff1b68;
+    background-color: white;
+    border:none;
+}
