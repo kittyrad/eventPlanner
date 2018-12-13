@@ -24,7 +24,7 @@ class Navigation extends React.Component {
                             <a href="events">Future Events</a>
                         </li>
                         <li class="main-nav__item main-nav__item--cta">
-                            <a href="events">Plan Event</a>
+                            <a href="plan">Plan Event</a>
                         </li>
                     </ul>
                 </nav>

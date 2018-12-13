@@ -1,0 +1,17 @@
+.location__items {
+    width: 100%;
+}
+
+.location__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 400px;
+}
+
+.search {
+    width: 40%;
+}
+
+.view {
+    width: 60%;
+}

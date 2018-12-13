@@ -32,7 +32,7 @@ class AllEvents extends React.Component {
         return (
             <div>
                 <Navigation/>
-                <div class="main-section__events">
+                <div class="main-section__events ">
                 {content}
                 </div>
             }
@@ -42,8 +42,8 @@ class AllEvents extends React.Component {
 }
 
 const EventDetails = (props) => (
-    <div class="main-section__event"key={props.event.id}>
-        <p>Date: {props.event.date}</p>
+    <div class="main-section__event highlighted"key={props.event.id}>
+        <p class="active">Date: {props.event.date}</p>
         <p>Name: {props.event.name}</p>
         <p>Number of guests: {props.event.nrGuests}</p>
         <p>Location: {props.event.location}</p>
