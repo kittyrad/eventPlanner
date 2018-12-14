@@ -1,11 +1,16 @@
 .main-search__container {
     border: 3px solid #fa9323;
-    height: 400px;
+    height: 500px;
 }
 
 .main-search__component {
     text-align: left;
     margin-left: 20px;
+}
+
+
+.main-search__component h1 {
+    text-align: center;
 }
 
 .main-search__component button {

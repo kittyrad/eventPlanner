@@ -3,75 +3,56 @@ import Navigation from "../navigation/Navigation";
 import Search from "./Search";
 import LocationView from "./LocationView";
 import "./EventPlanner.css";
+import Filter from "../filter/Filter";
 
 class EventPlanner extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
+        this.state = {
+            availableLocations:[]
+        }
+       // this.searchForAvailableLocations = this.searchForAvailableLocations.bind(this); //??altfel nu merge fara bind
     }
 
     searchShit = param => {
         console.log('Searching for some shit', param);
     };
 
+    //daca am function trebuie sa ii fac bind ca nu stie sa faca bind singur, daca am arrow merge fara bind
+    //https://reactkungfu.com/2015/07/why-and-how-to-bind-methods-in-your-react-component-classes/
+    searchForAvailableLocations = param => {
+        this.setState({
+            availableLocations: param.availableLocations
+        });
+    };
+
     render() {
         return (
             <div>
-                <Navigation/>
-                <div class="location__items">
-                    <div class="location__item search">
-                        <Search onSearch={this.searchShit}/>
-                    </div>
-                    <div class="location__item view">
-                        <LocationView/>
-                    </div>
-                </div>
+                <main>
+                    <section>
+                        <Navigation/>
+                    </section>
 
-                <div>
-                    <article>
-                        <h1>FREE</h1>
-                        <h2>$0/month</h2>
-                        <h3>For hobby projects or small teams.</h3>
-                        <ul>
-                            <li>1 Workspace</li>
-                            <li>Unlimited Traffic</li>
-                            <li>10GB Storage</li>
-                            <li>Basic Support</li>
-                        </ul>
-                        <div>
-                            <button>CHOOSE PLAN</button>
+                    <section>
+                        <div class="location__items">
+                            <div class="location__item search">
+                                <div>
+                                    <Search onSearch={this.searchShit} onSearchForAvailableLocations={this.searchForAvailableLocations}/>
+                                </div>
+                                <div>
+                                    <Filter/>
+                                </div>
+                            </div>
+
+                            <div class="location__item view">
+                                <LocationView locations={this.state.availableLocations}/>
+                            </div>
+
                         </div>
-                    </article>
-                    <article>
-                        <h1>RECOMMENDED</h1>
-                        <h1>PLUS</h1>
-                        <h2>$29/month</h2>
-                        <h3>For ambitious projects.</h3>
-                        <ul>
-                            <li>5 Workspaces</li>
-                            <li>Unlimited Traffic</li>
-                            <li>100GB Storage</li>
-                            <li>Plus Support</li>
-                        </ul>
-                        <div>
-                            <button>CHOOSE PLAN</button>
-                        </div>
-                    </article>
-                    <article>
-                        <h1>PREMIUM</h1>
-                        <h2>$99/month</h2>
-                        <h3>Your enterprise solution.</h3>
-                        <ul>
-                            <li>10 Workspaces</li>
-                            <li>Unlimited Traffic</li>
-                            <li>Unlimited Storage</li>
-                            <li>Priority Support</li>
-                        </ul>
-                        <div>
-                            <button>CHOOSE PLAN</button>
-                        </div>
-                    </article>
-                </div>
+                    </section>
+                </main>
             </div>
 
         );

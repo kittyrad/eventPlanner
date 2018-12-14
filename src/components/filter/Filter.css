@@ -1,0 +1,12 @@
+.main-filter__container {
+    border: 3px solid #fa9323;
+    height: 400px;
+}
+
+.main-filter__container h1 {
+    text-align: center;
+}
+
+.main-filter__item {
+    padding: 20px;
+}

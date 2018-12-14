@@ -1,12 +1,25 @@
 .main-location__container {
-    border: 3px solid #fa9323;
-    height: 400px;
+
+    height: 100%;
 }
 
 .location_item__display {
-    padding:30px;
+    padding:10px;
 }
 
 .location_item__display li {
     list-style: none;
+    border: 3px solid #fa9323;
+}
+
+.location_item__description {
+    height: 100px;
+}
+
+.location-overview {
+    text-align: center;
+}
+
+.section-location {
+    text-align: center;
 }

@@ -15,7 +15,13 @@ const locations = [
 const availabilities = [
     {"id":1, "title": "Sun Garden"},
     {"id":2, "title": "Wonderland"},
-    {"id":3, "title": "Golden Tulip"}
+    {"id":3, "title": "Wonderland"},
+    {"id":4, "title": "Wonderland"},
+    {"id":5, "title": "Wonderland"},
+    {"id":6, "title": "Wonderland"},
+    {"id":7, "title": "Wonderland"},
+    {"id":8, "title": "Wonderland"},
+    {"id":9, "title": "Golden Tulip"}
 ];
 
 const mapDispatchToProps = dispatch => {
@@ -52,6 +58,7 @@ class ConnectedSearch extends React.Component {
         });
 
         this.props.onSearch({shit:"search shit"});
+        this.props.onSearchForAvailableLocations({availableLocations:availabilities});
     }
 
     onSelect(option) {
@@ -67,7 +74,8 @@ class ConnectedSearch extends React.Component {
     }
 
     handleEndDateChange(date) {
-        if (this.validateEndDate(date) == true) {
+        var isValid = this.validateDate(this.state.startDate, date);
+        if (isValid == true) {
             this.setState({
                 endDate: date
             });
@@ -77,6 +85,10 @@ class ConnectedSearch extends React.Component {
                 endDate: this.state.startDate
             });
         }
+    }
+
+    validateDate = (startDate, endDate) => {
+        return moment(endDate).isAfter(moment(startDate));
     }
 
     handleNumberOfGuests(event) {
@@ -118,7 +130,7 @@ class ConnectedSearch extends React.Component {
         return (
             <div class="main-search__container">
                 <div class="main-search__component">
-                    <p>Search</p>
+                    <h1>Search</h1>
 
                     <p>Locations</p>
                     <div class="main-location__dropdown">

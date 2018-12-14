@@ -5,7 +5,7 @@
 .location__item {
     display: inline-block;
     vertical-align: top;
-    height: 400px;
+    height: 100%;
 }
 
 .search {
@@ -14,4 +14,12 @@
 
 .view {
     width: 60%;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.filter {
+    width: 40%;
 }

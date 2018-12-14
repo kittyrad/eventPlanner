@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { connect } from "react-redux";
 import "./LocationView.css";
 
-const mapStateToProps = state => {
-    return { availableLocations: state.availableLocations };
-};
+//This is used to read from redux store
+// const mapStateToProps = state => {
+//     return { availableLocations: state.availableLocations };
+// };
 
 // const LocationView = (props) => (
 //     <ul>
@@ -22,16 +23,15 @@ class LocationView extends Component {
         return (
             <div class="main-location__container">
                 <main>
-                    <section id="location-overview">
+                    <section class="location-overview">
                         <h1>Available locations</h1>
                     </section>
                     <section id="locations">
                         <h1 class="section-location"> Choose your location </h1>
-
                         <ul>
-                            {this.props.availableLocations.map( location => (
+                            {this.props.locations.map( location => (
                                 <div class="location_item__display">
-                                    <li key={location.id}>
+                                    <li class="location_item__description" key={location.id}>
                                         {location.title}
                                     </li>
                                 </div>
@@ -44,4 +44,6 @@ class LocationView extends Component {
     }
 }
 
-export default  connect(mapStateToProps)(LocationView);
+//This is used to connect to redux
+//export default  connect(mapStateToProps)(LocationView);
+export default  LocationView;

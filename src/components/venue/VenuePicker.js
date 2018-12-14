@@ -4,7 +4,12 @@ import DateSelector from "../dateSelector/DateSelector"
 
 const locations = [
     {"id":1, "name":"Sun Garden", "image":"sun-garden-resort.jpg"},
-    {"id":2, "name":"Wonderland Resort", "image":"wonderland-resort.jpg"}
+    {"id":2, "name":"Sun Garden", "image":"sun-garden-resort.jpg"},
+    {"id":3, "name":"Sun Garden", "image":"sun-garden-resort.jpg"},
+    {"id":4, "name":"Sun Garden", "image":"sun-garden-resort.jpg"},
+    {"id":5, "name":"Sun Garden", "image":"sun-garden-resort.jpg"},
+    {"id":6, "name":"Sun Garden", "image":"sun-garden-resort.jpg"},
+    {"id":7, "name":"Wonderland Resort", "image":"wonderland-resort.jpg"}
 ];
 
 class VenuePicker extends React.Component {
