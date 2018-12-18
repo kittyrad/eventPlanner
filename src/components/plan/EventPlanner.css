@@ -23,3 +23,14 @@
 .filter {
     width: 40%;
 }
+
+.submit-footer {
+    text-align: right;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.request-offer {
+    width: 110px;
+    height: 50px;
+}

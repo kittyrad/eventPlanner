@@ -49,7 +49,6 @@ class EventPlanner extends React.Component {
                             <div class="location__item view">
                                 <LocationView locations={this.state.availableLocations}/>
                             </div>
-
                         </div>
                     </section>
                 </main>

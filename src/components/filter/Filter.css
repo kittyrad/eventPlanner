@@ -10,3 +10,8 @@
 .main-filter__item {
     padding: 20px;
 }
+
+.filter-item {
+    margin-top: 20px;
+    margin-left: 20px;
+}

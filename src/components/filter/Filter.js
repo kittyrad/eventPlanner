@@ -1,20 +1,44 @@
 import React from 'react';
 import "./Filter.css";
+import Checkbox from "./Checkbox";
+
+const itemTypes = [
+    'Business',
+    'Private'
+];
 
 class Filter extends React.Component {
 
+    state = {
+        selectedCheckboxes: new Set(),
+        eventType: ''
+    }
+
+    toggleCheckbox = label => {
+        this.state.eventType = label;
+    }
+
+    createCheckbox = label => (
+        <Checkbox
+            label={label}
+            handleCheckboxChange={this.toggleCheckbox}
+            key={label}
+        />
+    )
+
+    createCheckboxesForEventType = () => (
+        itemTypes.map(this.createCheckbox)
+    )
+
     render() {
         return (
-            <div class="main-filter__container">
-                <h1>My Filter </h1>
-                <div class="main-filter__item">
-                    Number of Stars
-                </div>
-                <div class="main-filter__item">
-                    Event Type
-                </div>
-                <div class="main-filter__item">
-                   Hotel Rooms
+            <div className="main-filter__container">
+                <h1>Filter</h1>
+                <div class="filter-item"> Event Type </div>
+                <div className="row">
+                    <div className="main-filter__item">
+                            {this.createCheckboxesForEventType()}
+                    </div>
                 </div>
             </div>
         );
