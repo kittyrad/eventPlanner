@@ -1,0 +1,9 @@
+.location__items {
+    width: 100%;
+}
+
+.location__item {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+}

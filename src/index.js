@@ -10,6 +10,7 @@ import { render } from "react-dom";
 import { Provider } from "react-redux";
 import store from '../src/js/store/index'
 import WishEvents from "./components/wishEvents/WishEvents";
+import HotelDetails from "./components/hotelDetails/HotelDetails";
 
 ReactDOM.render(
     <Provider store={store}>
@@ -19,6 +20,7 @@ ReactDOM.render(
             <Route path="/events" component={AllEvents}/>
             <Route path="/plan" component={EventPlanner}/>
             <Route path="/wish" component={WishEvents}/>
+            <Route path="/hotels/:hotelId" component={HotelDetails}/>
         </div>
     </Router>
     </Provider>,document.getElementById('root'));
