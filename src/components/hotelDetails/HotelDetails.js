@@ -5,6 +5,8 @@ import Search from "../plan/Search";
 import Filter from "../filter/Filter";
 import "./HotelDetails.css";
 import LocationView from "../plan/LocationView";
+import { Redirect } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 const allHotels = [{"id": 1, "name": "Sun Garden", "description": "Very nice hotel and you will have a pleasant stay"},
     {"id": 2, "name": "Wonderland", "description": "Great hotel! Great stay"}]
@@ -46,6 +48,10 @@ class HotelDetails extends Component {
         });
     };
 
+    renderNavigation = () => {
+      this.props.history.push('/plan');
+    }
+
     render() {
         const content = this.state.hotels.map((hotel) =>
          <HotelDescription hotel={hotel}/>
@@ -62,7 +68,7 @@ class HotelDetails extends Component {
                         <div class="location__items">
                             <div class="location__item search">
                                 <div>
-                                    <Search onSearch={this.searchShit} onSearchForAvailableLocations={this.searchForAvailableLocations}/>
+                                    <Search onSearch={this.searchShit} onSearchForAvailableLocations={this.renderNavigation}/>
                                 </div>
                                 <div>
                                     <Filter/>
@@ -71,11 +77,9 @@ class HotelDetails extends Component {
                         </div>
                     </section>
 
-                    <section>
-                    <div>
+                    <div class="hotel__description">
                     {content}
                     </div>
-                    </section>
                 </main>
             </div>
         );
@@ -89,4 +93,4 @@ class HotelDetails extends Component {
          );
 
 
-export default HotelDetails;
+export default withRouter(HotelDetails);
