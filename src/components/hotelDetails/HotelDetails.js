@@ -16,7 +16,7 @@ class HotelDetails extends Component {
     state = {
         hotelId: null,
         hotels: [],
-        availableLocations:[]
+        availableLocations: []
     }
 
     //https://scotch.io/courses/using-react-router-4/route-params
@@ -74,12 +74,16 @@ class HotelDetails extends Component {
                                     <Filter/>
                                 </div>
                             </div>
-                        </div>
-                    </section>
 
-                    <div class="hotel__description">
-                    {content}
-                    </div>
+                             <div class="location__item view">
+                                  <div>
+                                      {content}
+                                  </div>
+                              </div>
+                        </div>
+
+
+                    </section>
                 </main>
             </div>
         );

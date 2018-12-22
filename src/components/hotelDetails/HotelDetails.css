@@ -7,3 +7,12 @@
     vertical-align: top;
     height: 100%;
 }
+
+.search {
+    width: 40%;
+}
+
+.view {
+    width: 60%;
+}
+

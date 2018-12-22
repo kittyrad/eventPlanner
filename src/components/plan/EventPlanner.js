@@ -5,12 +5,24 @@ import LocationView from "./LocationView";
 import "./EventPlanner.css";
 import Filter from "../filter/Filter";
 
+const availabilities = [
+    {"id":1, "title": "Sun Garden"},
+    {"id":2, "title": "Wonderland"},
+    {"id":3, "title": "Wonderland"},
+    {"id":4, "title": "Wonderland"},
+    {"id":5, "title": "Wonderland"},
+    {"id":6, "title": "Wonderland"},
+    {"id":7, "title": "Wonderland"},
+    {"id":8, "title": "Wonderland"},
+    {"id":9, "title": "Golden Tulip"}
+];
+
 class EventPlanner extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            availableLocations:[]
+            availableLocations: availabilities
         }
        // this.searchForAvailableLocations = this.searchForAvailableLocations.bind(this); //??altfel nu merge fara bind
     }
