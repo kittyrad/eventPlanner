@@ -102,17 +102,17 @@ class ConnectedSearch extends React.Component {
     }
 
     componentDidMount() {
-        fetch('http://localhost:8080/events/availableEvents', {
-            method: 'GET',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            }
-        })
-            .then(result => result.json())
-            .then(availableLocations => {
-                this.setState({availableLocations})
-            })
+//        fetch('http://localhost:8080/events/availableEvents', {
+//            method: 'GET',
+//            headers: {
+//                'Accept': 'application/json',
+//                'Content-Type': 'application/json'
+//            }
+//        })
+//            .then(result => result.json())
+//            .then(availableLocations => {
+//                this.setState({availableLocations})
+//            })
     }
 
     render() {
