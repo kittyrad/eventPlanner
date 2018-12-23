@@ -1,0 +1,13 @@
+.menu__container {
+  width: 60%;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 220px;
+  background-color: #19b84c;
+  height: 500px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.menu__title {
+  padding-top:30px;
+}
