@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux";
 import "./LocationView.css";
+import {addInterest} from "../../js/actions/index";
+import { Redirect } from 'react-router-dom';
+import { withRouter } from "react-router";
 
 //This is used to read from redux store
 // const mapStateToProps = state => {
@@ -17,7 +20,32 @@ import "./LocationView.css";
 //     </ul>
 // );
 
+function mapDispatchToProps(dispatch) {
+  return {
+    addInterest: interest => dispatch(addInterest(interest))
+  };
+}
+
 class LocationView extends Component {
+
+    state = {
+        interests: []
+    }
+
+    addToInterests = param => {
+       alert(this.state.interests);
+       var newArray = this.state.interests.slice();
+       var interestsWithSameId = newArray.filter(interest => interest.id == param.id);
+       if(interestsWithSameId.length == 0) {
+           newArray.push(param);
+           this.props.addInterest(param);
+       }
+       this.setState({interests:newArray})
+    };
+
+    renderMenu = () => {
+        this.props.history.push('/menu');
+    }
 
     render() {
         return (
@@ -42,7 +70,9 @@ class LocationView extends Component {
                                                 Rating: 10
                                             </div>
                                             <div class="main-search-item__add">
-                                                <button>Add to interests</button>
+                                                <button onClick={() => this.addToInterests(location)}>
+                                                Add to interests
+                                                </button>
                                             </div>
                                         </div>
                                     </li>
@@ -50,7 +80,7 @@ class LocationView extends Component {
                             ))}
                         </ul>
                         <div class="submit-footer">
-                            <button class="request-offer">Request offer</button>
+                            <button class="request-offer" onClick={this.renderMenu}>Request offer</button>
                         </div>
                     </section>
                 </main>
@@ -61,4 +91,4 @@ class LocationView extends Component {
 
 //This is used to connect to redux
 //export default  connect(mapStateToProps)(LocationView);
-export default LocationView;
+export default connect(null, mapDispatchToProps)(withRouter(LocationView));

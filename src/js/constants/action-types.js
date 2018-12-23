@@ -1,1 +1,2 @@
 export const ADD_LOCATION = "ADD_LOCATION";
+export const ADD_INTEREST = "ADD_INTEREST";
