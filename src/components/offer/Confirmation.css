@@ -1,0 +1,36 @@
+.confirmation__container {
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 220px;
+    background-color: #19b84c;
+    height: 400px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.confirmation__title {
+    padding-top:30px;
+}
+
+.confirmation__content {
+    padding-top: 50px;
+}
+
+.confirmation__all_content {
+    padding-left: 250px;
+}
+
+.description {
+    width: 400px;
+}
+
+.confirm {
+    margin-left: 1200px;
+}
+
+.confirmation__hotels {
+    padding-top: 30px;
+}
+
+.confirmation__details {
+    padding-top: 30px;
+}

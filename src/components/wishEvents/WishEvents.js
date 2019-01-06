@@ -6,6 +6,7 @@ class WishEvents extends React.Component {
 
     render() {
         return (
+            <body>
             <main>
                 <section>
                     <Navigation/>
@@ -25,7 +26,7 @@ class WishEvents extends React.Component {
                                 <li>Basic Support</li>
                             </ul>
                             <div>
-                                <button>CHOOSE PLAN</button>
+                                <button class="button">CHOOSE PLAN</button>
                             </div>
                         </article>
                         <article class="plan plan-highlighted">
@@ -40,7 +41,7 @@ class WishEvents extends React.Component {
                                 <li>Plus Support</li>
                             </ul>
                             <div>
-                                <button>CHOOSE PLAN</button>
+                                <button class="button">CHOOSE PLAN</button>
                             </div>
                         </article>
                         <article class="plan">
@@ -54,13 +55,49 @@ class WishEvents extends React.Component {
                                 <li>Priority Support</li>
                             </ul>
                             <div>
-                                <button>CHOOSE PLAN</button>
+                                <button class="button">CHOOSE PLAN</button>
                             </div>
                         </article>
                     </div>
                 </section>
+                <section id="key-features">
+                    <h1 class="section-title">Many Good Reasons to Stick Around</h1>
+                    <ul class="key_feature__list">
+                        <li class="key_feature">
+                            <div class="key_feature__image">
 
+                            </div>
+                            <p class="key_feature__description">3,857,000 Trusting Customers</p>
+                        </li>
+                        <li class="key_feature">
+                            <div class="key_feature__image">
+
+                            </div>
+                            <p class="key_feature__description">99.999% Uptime Guarantee</p>
+                        </li>
+                        <li class="key_feature">
+                            <div class="key_feature__image">
+
+                            </div>
+                            <p class="key_feature__description">Lightning Fast CDN</p>
+                        </li>
+                    </ul>
+                </section>
             </main>
+            <footer class="main-footer">
+                <nav>
+                    <ul class="main-footer__links">
+                        <li class="main-footer_link">
+                            <a href="#">Support</a>
+                        </li>
+                        <li class="main-footer_link">
+                            <a href="#">Terms of Use</a>
+                        </li>
+                    </ul>
+                </nav>
+            </footer>
+            </body>
+
         );
     }
 

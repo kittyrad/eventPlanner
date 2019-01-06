@@ -1,0 +1,48 @@
+.summary__container {
+    width: 60%;
+    margin-top: 50px;
+    margin-left: 220px;
+    background-color: #19b84c;
+    height: 400px;
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.summary__title {
+    padding-top:30px;
+}
+
+.summary__content {
+    padding-top: 50px;
+}
+
+.summary__all_content {
+    padding-left: 250px;
+}
+
+.description {
+    width: 400px;
+}
+
+.confirm {
+    margin-left: 1200px;
+}
+
+.confirm button {
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    background:#ff1b68;
+    border-radius: 8px;
+    padding: 0px;
+    border: 0px;
+    width: 100px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.confirm button:hover,
+.confirm button :active {
+    background:#19b84c;
+    color: white;
+}
